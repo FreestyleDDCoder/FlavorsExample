@@ -1,0 +1,34 @@
+android {
+    defaultConfig {
+        //所有变种都必须属于一个指定的变种维度，即一个产品变种组
+        flavorDimensions "default"
+    }
+
+    productFlavors {
+        AApp {
+
+        }
+        BApp {
+
+        }
+        CApp {
+
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("${rootDir}/AppSignedKey/platform.keystore")
+            storePassword "000000"
+            keyAlias "desay"
+            keyPassword "000000"
+        }
+
+        debug {
+            storeFile file("${rootDir}/AppSignedKey/platform.keystore")
+            storePassword "000000"
+            keyAlias "desay"
+            keyPassword "000000"
+        }
+    }
+}

@@ -1,0 +1,4 @@
+include ':Blibrary'
+include ':Alibrary'
+include ':app'
+rootProject.name = "FlavorsExample"
