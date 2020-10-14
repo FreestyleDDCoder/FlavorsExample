@@ -1,4 +1,5 @@
+include ':appbuildonebyflavors'
 include ':Blibrary'
 include ':Alibrary'
-include ':app'
+include ':appflavors'
 rootProject.name = "FlavorsExample"

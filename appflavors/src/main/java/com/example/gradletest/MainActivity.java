@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.alibrary.country.ChinaPerson;
+import com.example.blibrary.country.EnglistPerson;
 
 public class MainActivity extends AppCompatActivity {
     private final String TAG = "GradleTestMainActivity";
@@ -15,8 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "Person ： = " + new AppPerson().getPerson().getName());
-        ChinaPerson chinaPerson = new ChinaPerson();
-        chinaPerson.setID("46000");
-        Log.d(TAG, "Person ： = " + chinaPerson.getID());
+        Log.d(TAG, "ChinaPerson ： = " + new ChinaPerson().getID());
+        Log.d(TAG, "EnglistPerson ： = " + new EnglistPerson().getID());
     }
 }

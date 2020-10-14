@@ -1,9 +1,9 @@
-package com.example.alibrary.country;
+package com.example.blibrary.country;
 
 
 import com.example.blibrary.bean.Person;
 
-public class ChinaPerson extends Person {
+public class EnglistPerson extends Person {
     private String ID;
 
     public String getID() {
@@ -12,5 +12,9 @@ public class ChinaPerson extends Person {
 
     public void setID(String ID) {
         this.ID = ID;
+    }
+
+    public EnglistPerson(){
+        setID("AModle");
     }
 }

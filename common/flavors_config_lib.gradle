@@ -3,16 +3,13 @@ android {
         //所有变种都必须属于一个指定的变种维度，即一个产品变种组
         flavorDimensions "default"
     }
-    //由于Blibrary有一个维度，2个变种，所以App的变种需指定
+
     productFlavors {
-        AApp {
-            matchingFallbacks = ['AModle']
+        AModle {
+
         }
-        BApp {
-            matchingFallbacks = ['BModle']
-        }
-        CApp {
-            matchingFallbacks = ['AModle']
+        BModle {
+
         }
     }
 

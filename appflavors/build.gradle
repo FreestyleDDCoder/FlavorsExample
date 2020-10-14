@@ -35,7 +35,7 @@ android {
 
     //在导入系统或第三方jar时
     gradle.projectsEvaluated {
-        File configFile2= file("${rootDir}/common/framework.jar")
+        File configFile2 = file("${rootDir}/common/framework.jar")
         tasks.withType(JavaCompile) {
             String absolutePath2 = configFile2.absolutePath.replaceAll("\\\\", "\\\\\\\\")
             String Path2 = '-Xbootclasspath/p:' + absolutePath2
@@ -52,7 +52,6 @@ android {
             //dependencies.
         }
     }*/
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -64,12 +63,15 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    //implementation project(path: ':Blibrary',configuration: 'default')
+    implementation project(path: ':Blibrary')
+    implementation project(path: ':Alibrary')
     //可以采用以下方式来针对某些特定的版本进行编译
     //但是如果多个版本都需引用包，且多数引用相同，可采用applicationVariants.all方式处理
     //这里需要注意applicationVariants是针对app模块，libraryVariants是针对lib库模块，testVariants则都支持，看具体情况而定
     //当Alibrary和Blibrary有部分类定义相同时，则只能配置解析任务所需的特定变体依赖项
-    "AAppImplementation" project(":Alibrary")
-    "BAppImplementation" project(":Blibrary")
-    "CAppImplementation" project(":Alibrary")
+    //"AAppImplementation" project(":Alibrary")
+    //"BAppImplementation" project(":Blibrary")
+    //"CAppImplementation" project(":Alibrary")
     compileOnly files("${rootDir}/common/framework.jar")
 }
