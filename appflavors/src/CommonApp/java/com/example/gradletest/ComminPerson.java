@@ -2,18 +2,17 @@ package com.example.gradletest;
 
 import com.example.alibrary.Person;
 
-public class AppPerson {
+public class ComminPerson {
 
     public Person getPerson() {
         return person;
     }
 
-    private Person person;
+    private final Person person;
 
-    public AppPerson() {
+    public ComminPerson() {
         person = new Person();
-        person.setName("AApp");
+        person.setName("CommonPerson");
         person.setAge(0);
-        person = new ComminPerson().getPerson();
     }
 }

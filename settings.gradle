@@ -2,4 +2,6 @@ include ':appbuildonebyflavors'
 include ':Blibrary'
 include ':Alibrary'
 include ':appflavors'
+include ':videoUIProcess'
+include ':mediaServerProcess'
 rootProject.name = "FlavorsExample"

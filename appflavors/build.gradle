@@ -23,7 +23,7 @@ android {
 
     sourceSets {
         AApp {
-            java.srcDirs 'src/AApp/java'
+            java.srcDirs 'src/AApp/java', 'src/CommonApp/java'
         }
         BApp {
             java.srcDirs 'src/BApp/java'
